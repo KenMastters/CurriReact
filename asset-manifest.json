@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/curri/static/css/main.5a3701ca.css",
+    "main.js": "/curri/static/js/main.59788677.js",
+    "static/media/imagen1.jpg": "/curri/static/media/imagen1.18f3148e19ca1f59e40c.jpg",
+    "index.html": "/curri/index.html",
+    "main.5a3701ca.css.map": "/curri/static/css/main.5a3701ca.css.map",
+    "main.59788677.js.map": "/curri/static/js/main.59788677.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a3701ca.css",
+    "static/js/main.59788677.js"
+  ]
+}
