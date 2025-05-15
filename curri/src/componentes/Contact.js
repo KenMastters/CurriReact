@@ -5,15 +5,35 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleNameChange = (e) => setName(e.target.value);
-  const handleMessageChange = (e) => setMessage(e.target.value);
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSuccessMessage(`¡Gracias por tu mensaje, ${name}!`);
-    setName("");
-    setMessage("");
+
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("message", message);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xzzryype", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        setSuccessMessage(`¡Gracias por tu mensaje, ${name}!`);
+        setName("");
+        setMessage("");
+        setErrorMessage("");
+      } else {
+        setErrorMessage("Hubo un problema al enviar el mensaje. Inténtalo más tarde.");
+      }
+    } catch (error) {
+      setErrorMessage("Error de conexión. Intenta de nuevo.");
+    }
   };
 
   return (
@@ -22,7 +42,7 @@ const Contact = () => {
       <p>
         Si buscas a alguien apasionado por el desarrollo web, con ganas de aprender y aportar en equipo,
         ¡no dudes en contactarme! Estoy disponible para entrevistas y abierto a nuevas oportunidades, en el 
-        ambito de la informática y el desarrollo web.
+        ámbito de la informática y el desarrollo web.
       </p>
       <ul className="contact-list">
         <li>
@@ -61,26 +81,27 @@ const Contact = () => {
           <input
             type="text"
             id="name"
-            value={name}
-            onChange={handleNameChange}
+            name="name"
             required
             placeholder="Escribe tu nombre"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
         </div>
         <div className="form-group">
           <label htmlFor="message">Tu mensaje:</label>
           <textarea
             id="message"
-            value={message}
-            onChange={handleMessageChange}
+            name="message"
             required
             placeholder="Escribe tu mensaje"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
           />
         </div>
         <button type="submit">Enviar</button>
-        {successMessage && (
-          <p className="success-message">{successMessage}</p>
-        )}
+        {successMessage && <p className="success-message">{successMessage}</p>}
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
       </form>
     </section>
   );
