@@ -1,11 +1,39 @@
 .education {
-    background: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-  }
-  
-  .education h2 {
-    color: #007bff;
-  }
-  
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #23283a;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.education h2 {
+  color: #00b4d8;
+  margin-bottom: 1.5rem;
+}
+
+.education-list {
+  list-style: none;
+  padding: 0;
+}
+
+.education-list li {
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+  border-left: 4px solid #00b4d8;
+  padding-left: 1rem;
+  background: #23283a;
+  border-radius: 6px;
+  color: #e0e6ed;
+}
+
+.education-center {
+  color: #90e0ef;
+  font-style: italic;
+}
+
+.education-date {
+  float: right;
+  color: #90e0ef;
+  font-size: 0.95rem;
+}

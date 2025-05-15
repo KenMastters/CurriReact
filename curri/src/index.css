@@ -2,18 +2,129 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
-  background-color: #f4f4f4;
-  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a2233 0%, #23283a 60%, #0073b1 100%);
+  padding: 40px 0;
+  color: #e0e6ed;
+  transition: background 0.4s, color 0.4s;
 }
 
+/* Glassmorphism para las tarjetas principales */
 .container {
   max-width: 900px;
   margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
+  background: rgba(35, 40, 58, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+  border-radius: 22px;
+  padding: 32px 24px;
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(0,180,216,0.12);
+  transition: background 0.4s, box-shadow 0.3s;
+}
+
+/* Sombra y efecto al pasar el ratón */
+.container:hover {
+  box-shadow: 0 12px 40px 0 rgba(0,180,216,0.18);
+  background: rgba(35, 40, 58, 0.92);
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #23283a;
+}
+::-webkit-scrollbar-thumb {
+  background: #0073b1;
+  border-radius: 8px;
+}
+
+/* Títulos destacados */
+h1, h2, h3 {
+  color: #00b4d8;
+  letter-spacing: 1px;
+}
+
+/* Enlaces animados */
+a {
+  color: #00b4d8;
+  text-decoration: none;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+a:hover {
+  color: #90e0ef;
+  text-shadow: 0 0 8px #00b4d8aa;
+}
+
+/* Botones modernos */
+button {
+  background: linear-gradient(90deg, #0073b1 60%, #00b4d8 100%);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.7rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+button:hover {
+  background: linear-gradient(90deg, #00b4d8 60%, #0073b1 100%);
+  box-shadow: 0 4px 16px rgba(0,180,216,0.18);
+}
+
+/* Inputs y textarea modernos */
+input, textarea {
+  background: rgba(35, 40, 58, 0.95);
+  color: #e0e6ed;
+  border: 1.5px solid #444;
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border 0.2s, background 0.2s;
+}
+input:focus, textarea:focus {
+  background: #1a1e29;
+  border: 1.5px solid #00b4d8;
+  outline: none;
+}
+
+/* Animación de entrada para las tarjetas */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.container {
+  animation: fadeInUp 0.8s cubic-bezier(.39,.575,.565,1) both;
+}
+
+/* Grid layout para columnas principales */
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Responsive: una sola columna en móvil */
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+  .left-column, .right-column {
+    gap: 2rem;
+  }
 }

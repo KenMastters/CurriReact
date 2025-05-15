@@ -1,66 +1,105 @@
 /* Contact.css */
 .contact {
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #23283a;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: #00b4d8;
+}
+
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #e0e6ed;
+}
+
+.contact a {
+  color: #00b4d8;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  color: #90e0ef;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.contact-list li {
+  margin-bottom: 0.5rem;
+  color: #e0e6ed;
+}
+
+.contact-form {
+  margin-top: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  color: #e0e6ed;
+  font-weight: 500;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #fff;      /* Fondo blanco */
+  color: #23283a;        /* Texto oscuro */
+  font-size: 1rem;
+  transition: border 0.2s, background 0.2s;
+}
+
+input:focus, textarea:focus {
+  border: 1.5px solid #00b4d8;
+  outline: none;
+  background: #f4f8fb;   /* Un blanco suave al enfocar */
+  color: #23283a;
+}
+
+button {
+  background: #fff;      /* Botón blanco */
+  color: #0073b1;        /* Texto azul */
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #e0e6ed;   /* Botón gris claro al pasar el ratón */
+  color: #005582;
+}
+
+.success-message {
+  color: #27ae60;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+h3 {
+  color: #00b4d8;
+  margin-bottom: 1rem;
+}
+.contact-highlight {
+  color: #00b4d8;
   
-  .contact h2 {
-    font-size: 2rem;
-    color: #333;
-  }
-  
-  .contact p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-  }
-  
-  .contact a {
-    color: #0077b5;
-    text-decoration: none;
-  }
-  
-  .contact a:hover {
-    text-decoration: underline;
-  }
-  
-  .contact form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact label {
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  .contact input,
-  .contact textarea {
-    margin-top: 5px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .contact button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #0066cc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .contact button:hover {
-    background-color: #005bb5;
-  }
-  
-  .success-message {
-    margin-top: 20px;
-    color: green;
-    font-weight: bold;
-  }
-  
+}

@@ -1,11 +1,51 @@
 .experience {
-    background: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-  }
-  
-  .experience h2 {
-    color: #007bff;
-  }
-  
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #23283a;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.experience h2 {
+  color: #00b4d8;
+  margin-bottom: 1.5rem;
+}
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-list li {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid #00b4d8;
+  background: #23283a;
+  border-radius: 6px;
+  color: #e0e6ed;
+}
+
+.exp-date {
+  float: right;
+  color: #90e0ef;
+  font-size: 0.95rem;
+}
+
+.exp-role {
+  color: #90e0ef;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.experience-list p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+  color: #e0e6ed;
+}
+
+.exp-detail::before {
+  content: "– ";
+  color: #00b4d8;
+  font-weight: bold;
+}

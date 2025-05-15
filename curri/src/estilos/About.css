@@ -1,13 +1,41 @@
 .about {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-  }
-  
-  .about h2 {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-  }
-  
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #23283a !important; /* Fuerza fondo oscuro */
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.about h2 {
+  color: #00b4d8;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #e0e6ed;
+}
+
+.about-skills {
+  list-style: none;
+  padding: 0;
+}
+
+.about-skills li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #e0e6ed;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.about-skills li::before {
+  content: "●";
+  color: #00b4d8;
+  position: absolute;
+  left: 0;
+  font-size: 1.3em;
+  top: 0.1em;
+}

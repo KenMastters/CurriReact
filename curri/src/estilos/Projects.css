@@ -1,11 +1,54 @@
 .projects {
-    background: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-  }
-  
-  .projects h2 {
-    color: #007bff;
-  }
-  
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #23283a;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.projects h2 {
+  color: #00b4d8;
+  margin-bottom: 1.5rem;
+}
+
+.projects-list {
+  list-style: none;
+  padding: 0;
+}
+
+.projects-list li {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid #00b4d8;
+  background: #23283a;
+  border-radius: 6px;
+  color: #e0e6ed;
+}
+
+.project-type {
+  color: #90e0ef;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.project-private {
+  color: #90e0ef;
+  font-size: 0.95rem;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+.project-link {
+  color: #00b4d8;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 0.5rem;
+  transition: color 0.2s;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+  color: #90e0ef;
+}

@@ -2,52 +2,61 @@ import React, { useState } from "react";
 import "../estilos/Contact.css";
 
 const Contact = () => {
-  // Estados para manejar los campos del formulario y el mensaje de éxito
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
-  // Maneja el cambio en el campo de nombre
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
+  const handleNameChange = (e) => setName(e.target.value);
+  const handleMessageChange = (e) => setMessage(e.target.value);
 
-  // Maneja el cambio en el campo de mensaje
-  const handleMessageChange = (e) => {
-    setMessage(e.target.value);
-  };
-
-  // Maneja el envío del formulario
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevenir la recarga de la página
+    e.preventDefault();
     setSuccessMessage(`¡Gracias por tu mensaje, ${name}!`);
-    setName(""); // Limpiar el campo de nombre
-    setMessage(""); // Limpiar el campo de mensaje
+    setName("");
+    setMessage("");
   };
 
   return (
     <section className="contact">
       <h2>Contacto</h2>
-
-      {/* Enlace de correo */}
-      <p>Correo: 
-        <a href="mailto:kenmastrs@gmail.com">kenmastrs@gmail.com</a>
+      <p>
+        Si buscas a alguien apasionado por el desarrollo web, con ganas de aprender y aportar en equipo,
+        ¡no dudes en contactarme! Estoy disponible para entrevistas y abierto a nuevas oportunidades, en el 
+        ambito de la informática y el desarrollo web.
       </p>
+      <ul className="contact-list">
+        <li>
+          <strong>Email:</strong>{" "}
+          <a href="mailto:kenmastrs@gmail.com">kenmastrs@gmail.com</a>
+        </li>
+        <li>
+          <strong>LinkedIn:</strong>{" "}
+          <a
+            href="https://www.linkedin.com/in/david-muñoz-marin-b3a94b1b4"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            David Muñoz Marín
+          </a>
+        </li>
+        <li>
+          <strong>GitHub:</strong>{" "}
+          <a
+            href="https://github.com/KenMastters"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            KenMastters
+          </a>
+        </li>
+        <li>
+          <strong>Ubicación:</strong> <span className="contact-highlight">España</span>
+        </li>
+      </ul>
 
-      {/* Enlace de LinkedIn */}
-      <p>LinkedIn: 
-        <a
-          href="https://www.linkedin.com/in/david-muñoz-marin-b3a94b1b4"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
-      </p>
-
-      {/* Formulario de contacto */}
-      <form onSubmit={handleSubmit}>
-        <div>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <h3>Envíame un mensaje directo</h3>
+        <div className="form-group">
           <label htmlFor="name">Tu nombre:</label>
           <input
             type="text"
@@ -58,8 +67,7 @@ const Contact = () => {
             placeholder="Escribe tu nombre"
           />
         </div>
-
-        <div>
+        <div className="form-group">
           <label htmlFor="message">Tu mensaje:</label>
           <textarea
             id="message"
@@ -69,12 +77,11 @@ const Contact = () => {
             placeholder="Escribe tu mensaje"
           />
         </div>
-
         <button type="submit">Enviar</button>
+        {successMessage && (
+          <p className="success-message">{successMessage}</p>
+        )}
       </form>
-
-      {/* Mensaje de éxito */}
-      {successMessage && <p className="success-message">{successMessage}</p>}
     </section>
   );
 };

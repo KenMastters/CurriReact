@@ -1,1 +1,125 @@
+/* Puedes poner esto en App.css o en cada CSS de sección para modo oscuro */
+
+/* Fondo global oscuro y fuente */
+body, html, #root {
+  background: #1a2233 !important; /* Azul oscuro elegante */
+  color: #e0e6ed;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* Tarjetas/secciones principales */
+section,
+.header {
+  background: #23283a;
+  color: #e0e6ed;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  margin-bottom: 2rem;
+  transition: background 0.4s, color 0.4s, box-shadow 0.3s;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  color: #00b4d8;
+}
+
+/* Enlaces */
+a {
+  color: #00b4d8;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #90e0ef;
+  text-shadow: 0 0 6px #00b4d844;
+}
+
+/* Skills container */
+.skills-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.skills-container > div {
+  flex: 1 1 220px;
+  background: #23283a;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  transition: box-shadow 0.3s;
+}
+
+.skills-container > div:hover {
+  box-shadow: 0 6px 24px rgba(0,180,216,0.15);
+}
+
+/* Listas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.6rem;
+  padding-left: 1rem;
+  position: relative;
+  color: #e0e6ed;
+}
+
+li::before {
+  content: "•";
+  color: #00b4d8;
+  position: absolute;
+  left: 0;
+  font-size: 1.1em;
+}
+
+/* Inputs y botones */
+input, textarea {
+  background: #23283a;
+  color: #e0e6ed;
+  border: 1px solid #444;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.2s, background 0.2s;
+}
+
+input:focus, textarea:focus {
+  background: #1a1e29;
+  border: 1.5px solid #00b4d8;
+  outline: none;
+}
+
+button {
+  background: #0073b1;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #005582;
+}
+
+/* Mensaje de éxito en formularios */
+.success-message {
+  color: #27ae60;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+
+
+
 

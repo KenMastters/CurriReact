@@ -7,16 +7,22 @@ import Skills from "./componentes/Skills.js";
 import Projects from "./componentes/Projects.js";
 import Contact from "./componentes/Contact.js";
 
-
 function App() {
   return (
     <div className="container">
       <Header />
-      <About />
-      <Experience />
-      <Education />
-      <Skills />
-      <Projects />
+      <div className="main-grid">
+        <div className="left-column">
+          <About />
+          <Education />
+           <Projects />
+        </div>
+        <div className="right-column">
+          <Experience />
+          <Skills />
+         
+        </div>
+      </div>
       <Contact />
     </div>
   );
