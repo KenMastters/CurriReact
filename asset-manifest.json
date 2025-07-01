@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/CurriReact/static/css/main.f285e020.css",
-    "main.js": "/CurriReact/static/js/main.fdb74fb9.js",
+    "main.js": "/CurriReact/static/js/main.04ace6ef.js",
     "static/media/imagen1.jpg": "/CurriReact/static/media/imagen1.18f3148e19ca1f59e40c.jpg",
     "index.html": "/CurriReact/index.html",
     "main.f285e020.css.map": "/CurriReact/static/css/main.f285e020.css.map",
-    "main.fdb74fb9.js.map": "/CurriReact/static/js/main.fdb74fb9.js.map"
+    "main.04ace6ef.js.map": "/CurriReact/static/js/main.04ace6ef.js.map"
   },
   "entrypoints": [
     "static/css/main.f285e020.css",
-    "static/js/main.fdb74fb9.js"
+    "static/js/main.04ace6ef.js"
   ]
 }
